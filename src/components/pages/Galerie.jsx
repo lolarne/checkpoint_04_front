@@ -3,6 +3,7 @@ import Footer from './../footer/Footer.jsx';
 import { useEffect } from 'react';
 import './pages.css';
 import Cards from '../galerie/GalerieCard.jsx';
+import PostForm from '../galerie/PostForm.jsx';
 
 function Galerie(){
     useEffect(() => {
@@ -13,6 +14,7 @@ function Galerie(){
         <div className="page">
             <Navbar />
             <Cards />
+            <PostForm />
             <Footer />
         </div>
     );
