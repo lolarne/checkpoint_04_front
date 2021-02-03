@@ -2,6 +2,7 @@ import Navbar from './../navbar/Navbar.jsx';
 import Footer from './../footer/Footer.jsx';
 import { useEffect } from 'react';
 import './pages.css';
+import Cards from '../galerie/GalerieCard.jsx';
 
 function Galerie(){
     useEffect(() => {
@@ -11,6 +12,7 @@ function Galerie(){
     return(
         <div className="page">
             <Navbar />
+            <Cards />
             <Footer />
         </div>
     );
