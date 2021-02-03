@@ -1,4 +1,5 @@
 import Navbar from './../navbar/Navbar.jsx';
+import Footer from './../footer/Footer.jsx';
 import { useEffect } from 'react';
 import './pages.css';
 
@@ -10,6 +11,7 @@ function Login(){
     return(
         <div className="page">
             <Navbar />
+            <Footer />
         </div>
     );
 }
