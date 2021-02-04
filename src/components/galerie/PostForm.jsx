@@ -1,14 +1,54 @@
 import './postForm.css';
-import { useState } from 'react';
+import { useEffect , useState } from 'react';
 import axios from 'axios';
 import { FETCH } from '../../Fetch.js';
+import FileUpload from '../fileUpload/FileUpload.jsx';
 
 const PostForm = () => {
+    const [Illustration, setIllustration] = useState([]);
     const [nameImg, setNameImg] = useState("");
     const [category, setCategory] = useState("");
     const [color, setColor] = useState(0);
     const [date, setDate] = useState("");
     const [material, setMaterial] = useState("");
+
+    const [file, setFile] = useState("");
+    const [fileName, setFileName] = useState("");
+    const [uploadedFile, setUploadedFile] = useState({});
+
+    useEffect(()=>{
+        axios.get(`${FETCH}/galerie`).then((res)=> setIllustration(res.data));
+    }, []);
+
+    const onChange = (e) => {
+        setFile(e.target.files[0]);
+        setFileName(e.target.files[0].name);
+    };
+
+    const handleUpload = async (e) => {
+        const formData = new FormData();
+        formData.append("file", file);
+
+        try {
+            const res = await axios.post(`${FETCH}/upload`, formData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+            });
+
+            const { fileName, filePath } = res.data;
+
+            setUploadedFile({ fileName, filePath });
+
+        } catch (err) {
+            let message;
+            if (err.response.status === 500) {
+                message = "There was a problem with the server";
+            } else {
+                message = "Everything went fine";
+            }
+        }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,6 +58,7 @@ const PostForm = () => {
             color: color,
             date_creation: date,
             material: material,
+            img: uploadedFile.filePath,
         })
             .then(function (res) {
                 console.log(res);
@@ -73,6 +114,20 @@ const PostForm = () => {
             <label> Date:
                 <input type="date" name="date" value={date} onChange={(e) => setDate(e.target.value)} required />
             </label>
+            <label>Image :
+                <FileUpload
+                className="imageForm"
+                  method={(e) => {
+                    e.preventDefault();
+                    handleUpload();
+                  }}
+                  onChange={(e) => {
+                    onChange(e);
+                  }}
+                  fileName={uploadedFile.fileName}
+                  filePath={uploadedFile.filePath}
+                />
+                </label>
             <button type="submit" value="submit" onClick={handleSubmit}>Envoyer</button>
         </form>
     );
