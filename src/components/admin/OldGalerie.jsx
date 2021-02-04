@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { FETCH } from '../../Fetch.js';
+import './oldGalerie.css';
 
 const OldGalerie = () => {
     const [illustration, setIllustration] = useState([]);
@@ -15,10 +16,18 @@ const OldGalerie = () => {
     }
 
     return (
-        <div className="galeryCard">
+        <div className="OldgaleryCard">
             {illustration.map((item) => (
-                <div>
-                    <p>{item.name}{item.category}</p>
+                <div className="card">
+                    <div className="text">
+                        <p>Titre : {item.name}</p>
+                        <p>Catégorie : {item.category}</p>
+                        <p>Matériel : {item.material}</p>
+                        <p>Couleur (1 = oui; 0 = Noir & Blanc) : {item.color}</p>
+                        <p>Date : {item.date_creation}</p>
+                        <img src={item.img} />
+                    </div>
+
                     <button type="button" onClick={(e) => handleDelete(e, item.id)}>Supprimer</button>
                 </div>
             ))}

@@ -1,3 +1,21 @@
+.Galery{
+    display: flex;
+    justify-content: center;
+}
+
 .galeryCard{
-    margin-top: 300px;
+    margin-top: 84px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+}
+
+.galeryCard .card{
+    margin: 24px;
+}
+
+.galeryCard .picture{
+    height: 300px;
 }

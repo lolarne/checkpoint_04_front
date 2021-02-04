@@ -65,7 +65,8 @@ const PostForm = () => {
 
     return (
         <div className="postForm">
-            <form onSubmit={handleUpload}>
+            <h1>Ajouter une illustration</h1>
+            <form onSubmit={handleUpload} className="formulaire">
                 <label> Nom :
                 <input type="text" name="name" value={nameImg} onChange={(e) => setNameImg(e.target.value)} required />
                 </label>
@@ -90,23 +91,28 @@ const PostForm = () => {
                         <option value="collage">Collage</option>
                     </select>
                 </label>
-                <label>Coloration :</label>
-                <label for="yes">Couleur</label>
+                <label>Coloration :
+                    <label for="yes">Couleur
                 <input
-                    type="radio"
-                    name="color"
-                    value="1"
-                    onChange={(e) => setColor(e.target.value)}
-                    required
-                />
-                <label for="no">Noir & Blanc</label>
+                            type="radio"
+                            name="color"
+                            value="1"
+                            onChange={(e) => setColor(e.target.value)}
+                            required
+                        /></label>
+
+                    <label for="no">Noir & Blanc
                 <input
-                    type="radio"
-                    name="color"
-                    value="0"
-                    onChange={(e) => setColor(e.target.value)}
-                    required
-                />
+                            type="radio"
+                            name="color"
+                            value="0"
+                            onChange={(e) => setColor(e.target.value)}
+                            required
+                        />
+                    </label>
+                </label>
+
+
                 <label> Date:
                 <input type="date" name="date" value={date} onChange={(e) => setDate(e.target.value)} required />
                 </label>

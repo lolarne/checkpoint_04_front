@@ -1,0 +1,23 @@
+.OldgaleryCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.OldgaleryCard .card{
+    margin: 32px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.OldgaleryCard .text{
+    margin: 32px;
+}
+
+.OldgaleryCard button{
+    color: red;
+    border-radius: 10px;
+    height: 30px;
+}
