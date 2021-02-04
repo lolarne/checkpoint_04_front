@@ -1,12 +1,9 @@
 import { useEffect } from 'react';
-import {Link} from 'react-router-dom';
 import './pages.css';
-import LoginForm from '../admin/LoginForm.jsx';
 import PostForm from '../galerie/PostForm.jsx';
-import NewGalerie from '../admin/NewGalerie.jsx';
 import AdminNav from '../AdminNav/AdminNav.jsx';
 
-function Login(){
+function AddIll(){
     useEffect(() => {
         window.scrollTo(0, 0)
     });
@@ -14,12 +11,9 @@ function Login(){
     return(
         <div className="page">
             <AdminNav />
-            <button><Link to="/">Retour page d'Accueil</Link></button>
-            <LoginForm />
-            <NewGalerie />
             <PostForm />
         </div>
     );
 }
 
-export default Login;
+export default AddIll;
