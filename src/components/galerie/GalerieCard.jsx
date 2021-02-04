@@ -6,11 +6,11 @@ const GalerieCard = (props) => {
     const {picture} = props;
 
     return (
-        <div className="Galery">
-            <div className="galeryCard">
-                <div className="card">
-                    <div className="picture"><img src={picture.img} /></div>
-                    <div className="description">
+        <div>
+            <div>
+                <div>
+                    <div><img src={picture.img} /></div>
+                    <div>
                         <h2>{picture.name}</h2>
                         <p>Catégorie : {picture.category}</p>
                         <p>Matériel : {picture.material}</p>

@@ -3,22 +3,20 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FETCH } from '../../Fetch.js';
-import Cards from './GalerieCard.jsx';
+import GalerieCard from './GalerieCard.jsx';
 
 const GalerieList = () => {
-    const [picture, setPicture] = useState([]);
+    const [pictures, setPicture] = useState([]);
 
     useEffect(() => {
         axios.get(`${FETCH}/galerie`).then((res) => setPicture(res.data));
     }, []);
-
+    console.log(pictures);
     return (
-        <div className="Galery">
-            <div className="galeryCard">
-                {picture.map((picture) => (
-                    <Cards picture={picture}/>
-                ))}
-            </div>
+        <div>
+            {pictures.map((picture) => (
+                <GalerieCard picture={picture} />
+            ))}
         </div>
 
     )

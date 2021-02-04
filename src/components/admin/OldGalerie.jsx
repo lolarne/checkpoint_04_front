@@ -8,7 +8,7 @@ const OldGalerie = () => {
 
     useEffect(() => {
         axios.get(`${FETCH}/galerie`).then((res) => setIllustration(res.data));
-    }, []);
+    }, [illustration]);
 
     const handleDelete = (e, item) => {
         e.preventDefault();
@@ -19,13 +19,13 @@ const OldGalerie = () => {
         <div className="OldgaleryCard">
             {illustration.map((item) => (
                 <div className="card">
+                    <div className="img"><img src={item.img} /></div>
                     <div className="text">
                         <p>Titre : {item.name}</p>
                         <p>Catégorie : {item.category}</p>
                         <p>Matériel : {item.material}</p>
                         <p>Couleur (1 = oui; 0 = Noir & Blanc) : {item.color}</p>
                         <p>Date : {item.date_creation}</p>
-                        <img src={item.img} />
                     </div>
 
                     <button type="button" onClick={(e) => handleDelete(e, item.id)}>Supprimer</button>

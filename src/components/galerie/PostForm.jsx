@@ -124,7 +124,7 @@ const PostForm = () => {
             </form>
             {uploadedFile ? (
                 <div>
-                    <img src={uploadedFile.filePath} alt="" />
+                    <img className="img" src={uploadedFile.filePath} alt="" />
                     <p>{uploadedFile.fileName}</p>
                 </div>
             )
