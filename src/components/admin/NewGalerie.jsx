@@ -8,7 +8,7 @@ const NewGalerie = () => {
 
     useEffect(() => {
         axios.get(`${FETCH}/galerie/new`).then((res) => setIllustration(res.data));
-    }, []);
+    }, [illustration]);
 
     const handleAccept = (e, item) => {
         e.preventDefault();
@@ -24,14 +24,15 @@ const NewGalerie = () => {
         <div className="NewgaleryCard">
             {illustration.map((item) => (
                 <div className="card">
-                    <div>
+                    <div className="text">
                         <div className="img"><img src={item.img} /></div>
-                        <p>Titre : {item.name}</p>
-                        <p>Catégorie : {item.category}</p>
-                        <p>Matériel : {item.material}</p>
-                        <p>Couleur (1 = oui; 0 = Noir & Blanc) : {item.color}</p>
-                        <p>Date : {item.date_creation}</p>
-                        
+                        <div>
+                            <p>Titre : {item.name}</p>
+                            <p>Catégorie : {item.category}</p>
+                            <p>Matériel : {item.material}</p>
+                            <p>Couleur (1 = oui; 0 = Noir & Blanc) : {item.color}</p>
+                            <p>Date : {item.date_creation}</p>
+                        </div>
                     </div>
                     <div className="btn">
                         <button type="button" onClick={(e) => handleAccept(e, item.id)}>Ajouter</button>
