@@ -1,0 +1,23 @@
+.postForm{
+    padding: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.postForm .formulaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.postForm .formulaire label{
+    width: 100%;
+    margin: 24px;
+}
+
+.postForm .formulaire input{
+    margin-left: 24px;
+}

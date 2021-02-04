@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import './pages.css';
+import PostForm from '../galerie/PostForm.jsx';
 import AdminNav from '../AdminNav/AdminNav.jsx';
 
-function Login(){
+function AddIll(){
     useEffect(() => {
         window.scrollTo(0, 0)
     });
@@ -10,9 +11,9 @@ function Login(){
     return(
         <div className="page">
             <AdminNav />
-            <h1 className="titleLogin">Section Administrateur</h1>
+            <PostForm />
         </div>
     );
 }
 
-export default Login;
+export default AddIll;
