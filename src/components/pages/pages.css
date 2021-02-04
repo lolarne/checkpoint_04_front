@@ -1,4 +1,6 @@
 .page{
     background-color: var(--light);
     margin-top: 84px;
+    min-height: 100vh;
+    width: 100%;
 }

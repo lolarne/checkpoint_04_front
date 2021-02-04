@@ -13,7 +13,7 @@ const GalerieList = () => {
     }, []);
     console.log(pictures);
     return (
-        <div>
+        <div className="galeryList">
             {pictures.map((picture) => (
                 <GalerieCard picture={picture} />
             ))}
