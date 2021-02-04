@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import './pages.css';
 import AdminNav from '../AdminNav/AdminNav.jsx';
+import OldGalerie from '../admin/OldGalerie.jsx';
 
-function Login(){
+function ManageIll(){
     useEffect(() => {
         window.scrollTo(0, 0)
     });
@@ -10,9 +11,9 @@ function Login(){
     return(
         <div className="page">
             <AdminNav />
-            <h1 className="titleLogin">Section Administrateur</h1>
+            <OldGalerie />
         </div>
     );
 }
 
-export default Login;
+export default ManageIll;

@@ -6,6 +6,7 @@
     justify-content: center;
     background-color: var(--secondary-color);
     padding: 24px;
+    color: var(--dark);
 }
 
 .footer .first{
@@ -14,4 +15,10 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+}
+
+@media screen and (max-width: 767px){
+    .footer{
+        margin-bottom: 54px;
+    }
 }

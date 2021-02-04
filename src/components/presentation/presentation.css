@@ -1,0 +1,21 @@
+.Presentation{
+    display: flex;
+    justify-content: center;
+}
+
+.presentation{
+    margin-top: 84px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.presentation img{
+    width: 20%;
+}
+
+.presentation #textPresentation{
+    width: 60%;
+    text-align: justify;
+}
