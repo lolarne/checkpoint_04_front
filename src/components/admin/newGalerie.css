@@ -9,10 +9,32 @@
     flex-direction: column;
 }
 
+.NewgaleryCard .btn button{
+    margin: 16px;
+    border-radius: 10px;
+    height: 30px;
+    width: 70px;
+}
+
+.NewgaleryCard .btn button:hover{
+    cursor: pointer;
+}
+
+.NewgaleryCard .btn #add{
+    color: green;
+    border: 1px solid green;
+}
+
+.NewgaleryCard .btn #refuse{
+    color: red;
+    border: 1px solid red;
+}
+
 .NewgaleryCard .img img{
     height: 200px;
     width: 200px;
     object-fit: cover;
+    margin-right: 32px;
 }
 
 .NewgaleryCard .text{

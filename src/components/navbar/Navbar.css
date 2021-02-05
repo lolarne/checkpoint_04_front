@@ -8,7 +8,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    font-family: var(--third-font);
     z-index: 1;
 }
 

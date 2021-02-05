@@ -11,7 +11,7 @@ const GalerieList = () => {
     useEffect(() => {
         axios.get(`${FETCH}/galerie`).then((res) => setPicture(res.data));
     }, []);
-    console.log(pictures);
+    
     return (
         <div className="galeryList">
             {pictures.map((picture) => (

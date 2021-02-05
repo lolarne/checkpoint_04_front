@@ -5,8 +5,20 @@ import Space from '../../assets/space.jpg';
 import Jungle from '../../assets/jungle.jpg';
 import Gost from '../../assets/gost.jpg';
 import './carousel.css';
+// import {useState, useEffect} from 'react';
+// import axios from 'axios';
+// import {FETCH} from '../../Fetch.js';
 
 function CarouselHome() {
+
+    // const [illustration, setIllustration] = useState([]);
+
+    // useEffect(() => {
+    //     axios.get(`${FETCH}/galerie`).then((res) => setIllustration(res.data));
+    // }, []);
+
+    // const reversed = illustration.reverse();
+
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },

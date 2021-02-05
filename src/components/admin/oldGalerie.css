@@ -20,6 +20,11 @@
     color: red;
     border-radius: 10px;
     height: 30px;
+    border: 1px solid red;
+}
+
+.OldgaleryCard button:hover{
+    cursor: pointer;
 }
 
 .OldgaleryCard .card .img img{

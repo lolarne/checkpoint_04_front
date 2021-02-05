@@ -10,12 +10,10 @@ const UL = styled.ul`
     .liLinks{
         text-decoration: none;
         color: var(--dark);
-        font-family: var(--third-font);
         padding: 18px 10px;
         transition: 0.5s;
     }
     .liLinks:hover{
-        background-color: var(--dark-second);
         border-radius: 16px;
         cursor: pointer;
         color: var(--light);

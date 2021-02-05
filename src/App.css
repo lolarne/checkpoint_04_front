@@ -1,13 +1,12 @@
 :root{
     --light : #fffdf8;
     --dark: #262219;
-    --dark-second: #ffb5a7;
     --secondary-color: #D9A796;
-    --third-color: #fcd5ce;
 }
 
 * {
     box-sizing: content-box;
+    color: var(--dark);
   }
 
 ul {

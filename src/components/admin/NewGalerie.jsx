@@ -31,12 +31,12 @@ const NewGalerie = () => {
                             <p>Catégorie : {item.category}</p>
                             <p>Matériel : {item.material}</p>
                             <p>Couleur (1 = oui; 0 = Noir & Blanc) : {item.color}</p>
-                            <p>Date : {item.date_creation}</p>
+                            <p>Date : {item.date_creation.substring(0, 10).split("-").reverse().join("-")}</p>
                         </div>
                     </div>
                     <div className="btn">
-                        <button type="button" onClick={(e) => handleAccept(e, item.id)}>Ajouter</button>
-                        <button type="button" onClick={(e) => handleDelete(e, item.id)}>Supprimer</button>
+                        <button id="add" type="button" onClick={(e) => handleAccept(e, item.id)}>Ajouter</button>
+                        <button id="refuse" type="button" onClick={(e) => handleDelete(e, item.id)}>Refuser</button>
                     </div>
                 </div>
             ))}

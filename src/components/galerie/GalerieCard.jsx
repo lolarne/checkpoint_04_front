@@ -5,7 +5,7 @@ const GalerieCard = (props) => {
 
     const { picture } = props;
 
-    const date = picture.date_creation.substring(0, 10);
+    const date = picture.date_creation.substring(0, 10).split("-").reverse().join("-");
 
     return (
         <div className="galeryCard">
